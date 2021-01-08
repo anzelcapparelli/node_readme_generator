@@ -3,9 +3,13 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 // util pkg diff from files in utils dir! an acutal package!
 
-const generateMarkdown = require("./utils/generateMarkdown")
+const generateMarkdown = require("./utils/generateMarkdown");
+const fileName = "README.md";
 
 // const 
+
+let answers;
+
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -13,6 +17,7 @@ const questions = [
         type: "input",
         message: "Project title?",
         name: "title"
+        //maybe include default
     },
     {
         type: "input",
@@ -36,35 +41,39 @@ const questions = [
     //     message: "Please select any languages for which you would like to include code snippets (arrows to navigate)",
     //     name: "installation"
     // },
+
+    {
+        type: "input",
+        message: "Please input which collaborators you wish to include into the contributions section (separate names by commas)",
+        name: "contributing"
+    },
+    {
+        type: "input",
+        message: "Please input how to run tests with this code",
+        name: "test"
+    },
     {
         type: "list",
         message: "Please select the appropriate license (navigate using arrow keys, select one",
         choices: ["BDS-2 License", "GNU General Public License (GPL)", "MIT License", "Mozilla Public License 2.0", "Common Development and Distribution License"],
-        name: "installation"
-    },
+        name: "license"
+    }
     // is there a list of common licenses? Would like to use that
 
-    {
-        type: "input",
-        message: "Please input which collaborators you wish to include into the contributions section (separate names by commas)",
-        name: "contributing"
-    },
-    {
-        type: "input",
-        message: "Please input which collaborators you wish to include into the contributions section (separate names by commas)",
-        name: "contributing"
-    },
+
+    // ^^^ maybe check boolean if to include code snippets in tests 
+
 
     // {
     //     type: "checkbox",
     //     message: "Please input which contact methods you would like to include in your readme (includes placeholder)",
-    choices: ["email", "github template", "linkedIn template", "general href template (link addresses)"]
-    
-    // //
+    // choices: ["email", "github template", "linkedIn template", "general href template (link addresses)"]
+
+    //
     //     name: "questions"
     // }
 
-    ^^^ depending
+    // ^^^ depending
 
     // may want to just generate a section  
 
@@ -85,7 +94,13 @@ const questions = [
 
 inquirer.prompt(questions).then(answers => {
     console.log(answers)
+    fs.writeFile(`./output/README.md`, JSON.stringify(answers, null, 2), (err) => {
+        err ? console.error(err) : console.log("success!")
+    })
 })
+
+
+
 
 
 
@@ -97,6 +112,7 @@ inquirer.prompt(questions).then(answers => {
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) { }
 
+// can we collect fileName in 
 
 
 // // need to make input into a string for fs.writeFile(`./output/${fileName}.md`, JSON.stringify(data, null, 2), (err) => {
