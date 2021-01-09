@@ -26,7 +26,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "Please provide installation instructions (both for your app, and packages required for it to run",
+        message: "Please provide installation instructions (both for your app, and packages required for it to run)",
         name: "installation",
     },
     {
