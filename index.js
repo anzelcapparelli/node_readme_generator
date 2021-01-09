@@ -59,7 +59,7 @@ const questions = [
     {
         type: "list",
         message: "Please select the appropriate license (navigate using arrow keys, select one)",
-        choices: ["Apache 2.0 License", "BDS-3 License", "GNU General Public License (GPL v3)", "MIT License", "Mozilla Public License 2.0"],
+        choices: ["Apache_2.0_License", "BDS-3_License", "GNU_General_Public_License_(GPL v3)", "MIT_License", "Mozilla_Public_License_2.0"],
         name: "license",
     },
     // reference: https://choosealicense.com/
