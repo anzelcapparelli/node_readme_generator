@@ -3,15 +3,13 @@
 function renderLicenseBadge(license) {
 
   if (license) {
-    return `https://img.shields.io/badge/License-${license}-informational`;
+    return `![License](https://img.shields.io/badge/License-${license}-informational)`;
   } else {
     return "";
   }
 }
 
-
-
-
+// ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
 
 
 // TODO: Create a function that returns the license link
@@ -20,22 +18,18 @@ function renderLicenseLink(license) {
 
 
   if (license) {
-    return `https://img.shields.io/badge/License-${license}-informational`;
+    return `- [${license}](#${license})\n  `;
   } else {
     return "";
   }
 }
-
-
-
-
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
 
   if (license) {
-    return `https://img.shields.io/badge/License-${license}-informational`;
+    return `This project is licensed under the ${license}`;
   } else {
     return "";
   }
@@ -58,13 +52,12 @@ ${renderLicenseBadge(data.license)}
   ## Table of contents
   ​
   
-  * [Description](#Descriptionn)
-  * [Installation](#Installation)
-  * [Usage](#Usage)
-  * [Contributing](#Contributing)
-  * [Testing](#Testing)
-  * [License](#License)
-  * [Questions?](#Questions?)
+  - [Description](#Descriptionn)
+  - [Installation](#Installation)
+  - [Usage](#Usage)
+  - [Contributing](#Contributing)
+  - [Testing](#Testing)
+  ${renderLicenseLink(data.license)}- [Questions?](#Questions?)
   
   
   
@@ -97,7 +90,7 @@ ${renderLicenseBadge(data.license)}
   
   If you have any questions or comments, please contact me using one or more of the following:
   
-      Github Profile: https://github.com/${data.username}
+      Github Profile: [https://github.com/${data.username}](https://github.com/${data.username})
       Email: ${data.email}
   
   `;
