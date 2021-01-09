@@ -34,7 +34,7 @@ const questions = [
         message: "Please provide instructions on how to use",
         // might be good depending on which code snippet ``` dividers to use (mult choice)
         // then can included selected, or none if none selected 
-        name: "instructions"
+        name: "usage"
     },
     // {
     //     type: "checkbox",
@@ -47,22 +47,39 @@ const questions = [
         message: "Please input which collaborators you wish to include into the contributions section (separate names by commas)",
         name: "contributing"
     },
+
+    // ^^^ turn into bullets! 
+
     {
         type: "input",
         message: "Please input how to run tests with this code",
-        name: "test"
+        name: "testing"
     },
+
+    // ^^^ maybe check boolean if to include code snippets in tests 
+
     {
         type: "list",
         message: "Please select the appropriate license (navigate using arrow keys, select one",
         choices: ["BDS-2 License", "GNU General Public License (GPL)", "MIT License", "Mozilla Public License 2.0", "Common Development and Distribution License"],
         name: "license"
     }
-    // is there a list of common licenses? Would like to use that
+    // reference: https://choosealicense.com/
 
+    {
+        type: "input",
+        message: "Please enter your GitHub username",
+        name: "username"
+    },
 
-    // ^^^ maybe check boolean if to include code snippets in tests 
+    {
+        type: "input",
+        message: "Please enter your email",
+        name: "email"
+    },
 
+    // possibly check if email has a @ in the contents 
+    // (maybe indexOf @ ===-1  --> please eneter a valid email address)
 
     // {
     //     type: "checkbox",
