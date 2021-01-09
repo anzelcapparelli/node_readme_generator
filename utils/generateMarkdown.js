@@ -11,10 +11,59 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
 
-`;
+// can add template literals to strings (probs also other template literals!)
+
+function generateMarkdown(data) {
+  return `
+  # ${data.title}
+  
+  ## Table of contents
+  ​
+  
+  * [Description](#Descriptionn)
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [Contributing](#Contributing)
+  * [Testing](#Testing)
+  * [License](#License)
+  * [Questions?](#Questions?)
+  
+  
+  
+  
+  ## Description
+  
+  ${data.description}
+  
+  ## Installation
+  
+  ${data.installation}
+  
+  ## Usage
+  
+  ${data.usage}
+  
+  ## Contributing
+  
+  ${data.contributing}
+  
+  ## Testing
+  
+  ${data.testing}
+  
+  ## License
+  
+  ${data.license}
+  
+  ## Questions
+  
+  If you have any questions or comments, please contact me using one or more of the following:
+  
+      Github Profile: https://github.com/${data.username}
+      Email: ${data.email}
+  
+  `;
 }
 
 module.exports = generateMarkdown;
