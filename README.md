@@ -27,7 +27,7 @@ will download the necessary modules for the app to work.
 
 ## Usage
 
-run:
+Run:
 
 `sh node index.js `
 
@@ -39,11 +39,11 @@ Answer the prompted questions, and a generally formatted README.md file will be 
 
 ## Testing
 
-there are currently not automated tests for this app (will make soon!); as of current, answering questions with a single character can allow a quick trial of the process
+There are currently no automated tests for this app (will make soon!); as of current, answering questions with a single character can allow a quick trial of the process
 
 ## MIT
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License
 
 ## Questions?
 

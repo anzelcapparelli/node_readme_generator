@@ -58,7 +58,7 @@ const questions = [
 
     {
         type: "list",
-        message: "Please select the appropriate license (navigate using arrow keys, select one",
+        message: "Please select the appropriate license (navigate using arrow keys, select one)",
         choices: ["Apache 2.0", "BDS-3", "GNU General Public License (GPL v3)", "MIT", "Mozilla Public License 2.0"],
         name: "license",
     },
@@ -77,53 +77,8 @@ const questions = [
         default: "anzelcapparelli@gmail.com",
         name: "email",
     },
-
-
-
-    // Enhancements
-
-    // when info is entered, it is placed in appropriate section in README file
-    // IF NOTHING PROVIDED IN OPTIONAL, REMOVE SECTION (other than for necessary sections ie project title)
-    // object destructure?
-
-    // for (entries of object)
-    // FUNCTION: Object.fromEntries(data)
-
-
-    // type: "checkbox",
-    // message: "Please input which contact methods you would like to include in your readme (includes placeholder)",
-    // choices: ["email", "github template", "linkedIn template", "general href template (link addresses)"]
-
-    // ^^^include input based on contact methods selected (if none, omit section)
-
-    // type: "checkbox",
-    // message: "Please input which contact methods you would like to include in your readme (includes placeholder)",
-    // choices: ["email", "github template", "linkedIn template", "general href template (link addresses)"]
-
-    // use boolean to determine if you want to include code snippet templates
-    // ^^^ offer a checklist of which to include if so
-
-    //  [//]: # (This may be the most platform independent comment)
-    //  ^^^ this'll work like a comment in .md! MAKE SURE TO LEAVE EMPTY LINES AROUND!
-
-    // md formatting!
-
-    // change ternary condition into promise! util mod:     
-    // const writeAsync = util.promisify(fs.writeFile());
-
-    //read package.json for dependencies to help populate installation instructions!
-
 ];
 
-
-
-
-
-
-
-
-// ======================================================================================================================================
-// REST OF APP
 
 // // TODO: Create a function to write README file
 
@@ -163,3 +118,40 @@ function init() {
 
 // Function call to initialize app
 init();
+
+
+
+
+
+    // Enhancements
+
+    // when info is entered, it is placed in appropriate section in README file
+    // IF NOTHING PROVIDED IN OPTIONAL, REMOVE SECTION (other than for necessary sections ie project title)
+    // object destructure?
+
+    // for (entries of object)
+    // FUNCTION: Object.fromEntries(data)
+
+
+    // type: "checkbox",
+    // message: "Please input which contact methods you would like to include in your readme (includes placeholder)",
+    // choices: ["email", "github template", "linkedIn template", "general href template (link addresses)"]
+
+    // ^^^include input based on contact methods selected (if none, omit section)
+
+    // type: "checkbox",
+    // message: "Please input which contact methods you would like to include in your readme (includes placeholder)",
+    // choices: ["email", "github template", "linkedIn template", "general href template (link addresses)"]
+
+    // use boolean to determine if you want to include code snippet templates
+    // ^^^ offer a checklist of which to include if so
+
+    //  [//]: # (This may be the most platform independent comment)
+    //  ^^^ this'll work like a comment in .md! MAKE SURE TO LEAVE EMPTY LINES AROUND!
+
+    // md formatting!
+
+    // change ternary condition into promise! util mod:     
+    // const writeAsync = util.promisify(fs.writeFile());
+
+    //read package.json for dependencies to help populate installation instructions!
