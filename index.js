@@ -78,34 +78,30 @@ const questions = [
         name: "email"
     },
 
-    // possibly check if email has a @ in the contents 
-    // (maybe indexOf @ ===-1  --> please eneter a valid email address)
-
-    // {
-    //     type: "checkbox",
-    //     message: "Please input which contact methods you would like to include in your readme (includes placeholder)",
-    // choices: ["email", "github template", "linkedIn template", "general href template (link addresses)"]
-
-    //
-    //     name: "questions"
-    // }
-
-    // ^^^ depending
-
-    // may want to just generate a section  
 
 
-
-    // https://opensource.org/licenses  is a very comprehensive 
-
-    // Need: 
-
-    // 'Usage', 'License', 'Contributing', 'Tests', and 'Questions'
-    //  'table of contents',
-
+    // Enhancements
 
     // when info is entered, it is placed in appropriate section in README file
     // IF NOTHING PROVIDED IN OPTIONAL, REMOVE SECTION (other than for necessary sections ie project title)
+
+    // type: "checkbox",
+    // message: "Please input which contact methods you would like to include in your readme (includes placeholder)",
+    // choices: ["email", "github template", "linkedIn template", "general href template (link addresses)"]
+
+    // ^^^include input based on contact methods selected (if none, omit section)
+    
+    // type: "checkbox",
+    // message: "Please input which contact methods you would like to include in your readme (includes placeholder)",
+    // choices: ["email", "github template", "linkedIn template", "general href template (link addresses)"]
+
+    // use boolean to determine if you want to include code snippet templates
+    // ^^^ offer a checklist of which to include if so
+
+    //  [//]: # (This may be the most platform independent comment)
+    //  ^^^ this'll work like a comment in .md! MAKE SURE TO LEAVE EMPTY LINES AROUND!
+
+    // md formatting!
 
 ];
 
