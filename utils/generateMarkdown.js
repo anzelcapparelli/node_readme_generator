@@ -90,10 +90,12 @@ ${renderLicenseBadge(data.license)}
   
   If you have any questions or comments, please contact me using one or more of the following:
   
-      Github Profile: [https://github.com/${data.username}](https://github.com/${data.username})
-      Email: ${data.email}
-  
-  `;
+  Github Profile: [https://github.com/${data.username}](https://github.com/${data.username})
+
+  Email: ${data.email}
+
+`;
+
 }
 
 module.exports = generateMarkdown;
