@@ -21,7 +21,9 @@ This node app generates a readme for projects, and applies a general layout
 
 node.js, and the module 'inquirer' need to be downloaded to run this app in addition to the 'index.js' file on GitHub. Alternatively, downloading the 'index.js' and the 'package.json' from GitHub, then running
 
-`sh npm i `
+```sh 
+npm i 
+```
 
 will download the necessary modules for the app to work.
 
@@ -29,7 +31,9 @@ will download the necessary modules for the app to work.
 
 Run:
 
-`sh node index.js `
+```sh 
+node index.js 
+```
 
 Answer the prompted questions, and a generally formatted README.md file will be generated at the end of collecting input.
 
